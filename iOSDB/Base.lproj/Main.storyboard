@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Zuy-KC-yza">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Main Movie Seaerch-->
+        <scene sceneID="MZd-pB-XsG">
+            <objects>
+                <tableViewController id="1yn-4g-YOa" customClass="TableViewController" customModule="iOSDB" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="OpQ-sk-XSB">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <imageView key="tableFooterView" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="mWh-O3-Mwl">
+                            <rect key="frame" x="0.0" y="72" width="414" height="274"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        </imageView>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" id="Oi1-SW-TIX">
+                                <rect key="frame" x="0.0" y="28" width="414" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Oi1-SW-TIX" id="DVY-cN-e2X">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <rect key="contentStretch" x="1" y="1" width="1" height="1"/>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="6Xe-or-SDn" kind="show" id="78m-DE-X62"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="1yn-4g-YOa" id="Vxf-0m-EWy"/>
+                            <outlet property="delegate" destination="1yn-4g-YOa" id="rvO-Vg-6iv"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Main Movie Seaerch" id="Wfd-0f-mDT"/>
+                    <connections>
+                        <outlet property="moveImage" destination="mWh-O3-Mwl" id="obl-TL-Owv"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xIW-mA-Wve" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-133.33333333333334" y="-95.089285714285708"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="5r2-Rr-JlO">
+            <objects>
+                <viewController id="6Xe-or-SDn" customClass="ViewController" customModule="iOSDB" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="bwT-Es-QDA">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="m6o-tP-x8O">
+                                <rect key="frame" x="28" y="124" width="357" height="368"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="m6o-tP-x8O" secondAttribute="height" multiplier="357:368" id="5Mk-ci-e1T"/>
+                                </constraints>
+                            </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Iqq-Z6-HJ6">
+                                <rect key="frame" x="28" y="583" width="357" height="202"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Label" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="nCV-4f-hhM">
+                                <rect key="frame" x="28" y="516" width="357" height="41"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="nCV-4f-hhM" secondAttribute="height" multiplier="240:41" constant="117" id="IPI-mv-8bp"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="IID-2L-qXP" firstAttribute="trailing" secondItem="m6o-tP-x8O" secondAttribute="trailing" constant="29" id="6tC-vl-nfF"/>
+                            <constraint firstItem="Iqq-Z6-HJ6" firstAttribute="trailing" secondItem="m6o-tP-x8O" secondAttribute="trailing" id="Bws-Qv-LEN"/>
+                            <constraint firstItem="Iqq-Z6-HJ6" firstAttribute="top" secondItem="nCV-4f-hhM" secondAttribute="bottom" constant="26" id="F69-GL-z0b"/>
+                            <constraint firstItem="m6o-tP-x8O" firstAttribute="top" secondItem="IID-2L-qXP" secondAttribute="top" constant="36" id="HJ2-tb-PrU"/>
+                            <constraint firstItem="Iqq-Z6-HJ6" firstAttribute="leading" secondItem="m6o-tP-x8O" secondAttribute="leading" id="NbI-Bp-0Vn"/>
+                            <constraint firstItem="IID-2L-qXP" firstAttribute="bottom" secondItem="Iqq-Z6-HJ6" secondAttribute="bottom" constant="77" id="SR2-HH-6ey"/>
+                            <constraint firstItem="Iqq-Z6-HJ6" firstAttribute="top" secondItem="m6o-tP-x8O" secondAttribute="bottom" constant="91" id="Uo5-Kv-bev"/>
+                            <constraint firstItem="nCV-4f-hhM" firstAttribute="top" secondItem="m6o-tP-x8O" secondAttribute="bottom" constant="24" id="Vi0-UL-UDC"/>
+                            <constraint firstItem="IID-2L-qXP" firstAttribute="trailing" secondItem="nCV-4f-hhM" secondAttribute="trailing" constant="29" id="eLY-Ka-DOH"/>
+                            <constraint firstItem="nCV-4f-hhM" firstAttribute="leading" secondItem="IID-2L-qXP" secondAttribute="leading" constant="28" id="lpG-Yr-cjB"/>
+                            <constraint firstItem="m6o-tP-x8O" firstAttribute="leading" secondItem="IID-2L-qXP" secondAttribute="leading" constant="28" id="xYF-9E-Dxm"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="IID-2L-qXP"/>
+                    </view>
+                    <connections>
+                        <outlet property="mainMovieTitle" destination="nCV-4f-hhM" id="qLQ-1e-h2O"/>
+                        <outlet property="moiveSummary" destination="Iqq-Z6-HJ6" id="1Bd-Yi-AjB"/>
+                        <outlet property="movieLargePosterImage" destination="m6o-tP-x8O" id="htM-y3-UQv"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dZ2-Og-jTD" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="704.34782608695662" y="-178.125"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Pi3-IE-LjN">
+            <objects>
+                <navigationController id="Zuy-KC-yza" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="DIl-EA-Kfy">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="1yn-4g-YOa" kind="relationship" relationship="rootViewController" id="DaI-q2-tZl"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bh3-W1-n3p" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1052" y="-95"/>
+        </scene>
+    </scenes>
+</document>
